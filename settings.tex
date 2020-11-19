@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.5 in]{geometry}
+% \usepackage[showframe]{geometry}
+\usepackage{amsmath}
+\usepackage{tcolorbox}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{accents}
+\usepackage{titling}
+\usepackage{polynom}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{lipsum}
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+\pagestyle{fancy}
+\setlength{\headheight}{40pt}
+\newenvironment{solution}{
+  \renewcommand\qedsymbol{$\blacksquare$}
+  \begin{proof}[Solution]
+  }{
+  \end{proof}
+  }
+\newenvironment{sketch}{
+  \renewcommand\qedsymbol{$\square$}
+  \begin{proof}[Sketch]
+  }{
+  \end{proof}
+}
+\newenvironment{theorem}{
+  \begin{proof}[Theorem]
+  }{
+  \end{proof}
+}
+\newenvironment{lemma}{
+  \begin{proof}[Lemma]
+  }{
+  \end{proof}
+}
+\renewcommand\qedsymbol{$\blacksquare$}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\charac}[1]{\mathrm{char}\,{#1}}
+\newcommand{\idl}[1]{\langle {#1} \rangle}
+\newcommand{\Mod}[1]{\, \mathrm{mod}\,{#1}}
+\renewcommand{\deg}[1]{\mathrm{deg}{\,#1}}
+\newcommand{\mult}[2]{\mathrm{mult} #1_{#2}}
+\newcommand{\dsum}{\displaysyle \sum}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\gen}[1]{\langle #1 \rangle}
+\newcommand{\diam}[1]{\mathrm{diam}(#1)}
+\newcommand{\rt}[1]{\,\sqrt[]{#1}}
+\usepackage[labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+\newcommand{\Fex}[1]{F^{\tiny \mbox{ex}}_{#1}}
+\usepackage{color}
+
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage[numbers,sort&compress]{natbib}
+
+% \newtheorem{theorem}{Theorem}[section]
+% \newtheorem{proposition}[theorem]{Proposition}
+% \newtheorem{lemma}[theorem]{Lemma}
+% \newtheorem{corollary}[theorem]{Corollary}
+% \newtheorem{observation}[theorem]{Observation}
+
+% \theoremstyle{definition}
+% \newtheorem{definition}[theorem]{Definition}
+% \newtheorem{algorithm}[theorem]{Algorithm}
+% \newtheorem{conjecture}[theorem]{Conjecture}
+% \newtheorem{question}[theorem]{Question}
+% \newtheorem{problem}[theorem]{Problem}
+% \newtheorem{exercise}[theorem]{Exercise}
+% \newtheorem{result}[theorem]{Result}
+
+\newtheorem{examplex}{Example}[section]
+\newenvironment{example}{
+\pushQED{\qed}
+\renewcommand{\qedsymbol}{$\diamondsuit$}\examplex}{
+  \popQED\endexamplex
+}
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+
+
+% Graph Theory
+
+\newcommand{\ceeil}[1]{\left \lceil #1 \right \rceil }
+\newcommand{\alg}{Shortlex Assignment Algorithm}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\ecc}[2]{\mathrm{ecc}(#1, S_{#2})}
+\newcommand{\compdiam}[1]{\mathrm{comp\,diam}(#1)}
+
+% Tikz (for drawing diagrams.)
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.markings}
+\tikzset{->-/.style={decoration={
+			markings,
+			mark=at position #1 with {\arrow{>}}},postaction={decorate}}}
+
+\tikzstyle{vertex}=[circle, draw, inner sep=0pt, minimum size=4pt,fill=black]
+\newcommand{\vertex}{\node[vertex]}
+\tikzstyle{hollowvertex}=[circle, draw, inner sep=0pt, minimum size=4pt, fill=white]
+\newcommand{\hollowvertex}{\node[hollowvertex]}
+\tikzstyle{phantomvertex}=[circle, draw, inner sep=0pt, minimum size=4pt,color=white]
+\newcommand{\phantomvertex}{\node[phantomvertex]}
+	
+\usepackage{enumitem}
+\usepackage[vlined, ruled]{algorithm2e}
