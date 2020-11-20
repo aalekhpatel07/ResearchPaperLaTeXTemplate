@@ -1,4 +1,10 @@
 \input{settings}
+
+% You can adjust the position of the Title on the first page
+% by adjusting the second parameter in the line below.
+\setlength{\droptitle}{-15em}
+
+
 \begin{document}
 	\title{Title of the Paper}
 	\author{
@@ -14,21 +20,22 @@
 		\small{Department of Author 3, Some University,}\\\small{Street, City, State Postal-Code, Country}\\
 		\small E-mail: \href{mailto:author-3@university.com}{\texttt{author-3@university.com}}
 	}
-	\lhead{Author 1 \hspace{0.2cm} Author 2 \hspace{0.2cm} Author 3} 
+	\lhead{Author 1,\, Author 2,\, Author 3} 
 	\rhead{Short Title} % Optional
 	\cfoot{\thepage\ of \pageref{LastPage}}
 	\newpage
 	\begin{titlingpage}
 		\maketitle
-		\indent\indent\small\textbf{Key words:} \small\input{keywords}\\
-		\indent\indent\small\textbf{AMS Subject Classification Codes:} \small\input{AMS_Classification_Codes}\\
-		\date{\today}
+		\indent\indent\small\textbf{Key words:}\,\input{keywords}\\
+		\indent\indent\small\textbf{AMS Subject Classification Codes:}\,\input{AMS_Classification_Codes}
 		\begin{abstract}
 			\input{abstract}
 		\end{abstract}
 	\end{titlingpage}
 	\newpage
 	\input{introduction}
-\newpage
-\input{References}
+% 	\input{definition}
+%   	\input{sectionTwo}
+    \newpage
+    \input{References}
 \end{document}
