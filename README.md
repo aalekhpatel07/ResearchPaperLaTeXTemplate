@@ -7,7 +7,10 @@
 Clone this project into your computer.
 
 If using [Overleaf](https://www.overleaf.com) (and you should because its the GOAT for cloud-based TeX compilation) or any other cloud-based TeX platforms like [Papeeria](https://www.papeeria.com), [ShareLatex](https://www.sharelatex.com) (now a part of **Overleaf**).
-  - Upload the whole cloned directory to that service.
+  - First, compress the whole folder into a zip file.
+  - Create a New Project on Overleaf using the upload option.
+  - Upload the zipped filed.
+  - Select `Menu`, and set the `Main Document` dropdown to `ResearchPaperLaTeXTemplate/main.tex`.
   - That's it! Start writing the paper.
 
 Otherwise:
